@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './Header.css'
+import SearchIcon from "@mui/icons-material/Search"
 
 class Header extends Component{
     render(){
@@ -12,8 +13,10 @@ class Header extends Component{
                     <input 
                     className="header__searchInput" 
                     type="text">
-
                     </input>
+                    <SearchIcon 
+                        className="header__searchIcon">
+                    </SearchIcon>
                 </div>
 
                 <div className="head_navbar">
