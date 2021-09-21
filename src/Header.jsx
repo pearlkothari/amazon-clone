@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './Header.css'
 import SearchIcon from "@mui/icons-material/Search"
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 class Header extends Component{
     render(){
@@ -45,6 +46,11 @@ class Header extends Component{
                         <span className="header__second">
                             Prime
                         </span>
+                    </div>
+
+                    <div className="header__optionBasket">
+                        <AddShoppingCartIcon/>
+                        <span className="header__second header__basketCount">0</span>
                     </div>
                 </div>
             </div>

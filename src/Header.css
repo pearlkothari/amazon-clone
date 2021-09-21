@@ -44,10 +44,24 @@
   flex-direction: column;
   margin-left: 20px;
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.945);
 }
 
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.945);
+}
+.header__basketCount {
+  font-size: 10px;
+}
+.header__second {
+  font-size: 13px;
+  font-weight: 800;
+}
 .header__first {
   font-size: 10px;
 }
