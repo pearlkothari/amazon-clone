@@ -19,8 +19,8 @@ class Header extends Component{
                     </SearchIcon>
                 </div>
 
-                <div className="head_navbar">
-                    <div className="Sign_In">
+                <div className="header__navbar">
+                    <div className="header__option">
                         <span className="header__first">
                             Hello Guest
                         </span>
@@ -29,7 +29,7 @@ class Header extends Component{
                         </span>
                     </div>
 
-                    <div className="Return__Orders">
+                    <div className="header__option">
                         <span className="header__first">
                             Returns
                         </span>
@@ -38,7 +38,7 @@ class Header extends Component{
                         </span>
                     </div>
 
-                    <div className="Your__Prime">
+                    <div className="header__option">
                         <span className="header__first">
                             Your
                         </span>
