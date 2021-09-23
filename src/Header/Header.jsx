@@ -4,11 +4,28 @@ import SearchIcon from "@mui/icons-material/Search"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 class Header extends Component{
+    constructor(){
+        super();
+
+        this.state={
+            count:0
+        };
+
+        this.update=this.update.bind(this);
+    }
+    update(){
+        this.setState(
+            (prev)=>{
+                return {count:prev.count+1};
+            }
+        );
+    }
     render(){
         return(
             <div className="header clearfix">
                 <img className="header__logo" 
-                    src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"/>
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"
+                    alt=""/>
 
                 <div className="header__search">
                     <input 
