@@ -4,6 +4,22 @@ import SearchIcon from "@mui/icons-material/Search"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 class Header extends Component{
+    constructor(){
+        super();
+
+        this.state={
+            count:0
+        };
+
+        this.update=this.update.bind(this);
+    }
+    update(){
+        this.setState(
+            (prev)=>{
+                return {count:prev.count+1};
+            }
+        );
+    }
     render(){
         return(
             <div className="header clearfix">
@@ -50,7 +66,7 @@ class Header extends Component{
 
                     <div className="header__optionBasket">
                         <AddShoppingCartIcon/>
-                        <span className="header__second header__basketCount">0</span>
+                        <span className="header__second header__basketCount">{this.state.count}</span>
                     </div>
                 </div>
             </div>

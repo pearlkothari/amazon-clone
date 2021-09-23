@@ -1,5 +1,22 @@
+.Home__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1350px;
+}
+.home__row {
+  display: flex;
+  z-index: 1;
+  margin-top: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .Prime__Image {
+  width: 100%;
   z-index: -1;
-  margin-bottom: -140px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  margin-bottom: -150px;
+  max-height: 450px;
+  mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
 }
