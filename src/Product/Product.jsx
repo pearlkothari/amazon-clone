@@ -1,13 +1,24 @@
 import React,{Component} from 'react';
 import Rating from '@mui/material/Rating'
 import Button from '@mui/material/Button'
+import SimpleImageSlider from "react-simple-image-slider";
 import './Product.css';
 
 class Product extends Component{
     render(){
         return(
             <div className="Product__Basic">
-                <img src={this.props.Image} alt=""/>
+                {!this.props.Image_Slider && <img src={this.props.Image} alt=""/>}
+                {this.props.Image_Slider && 
+                    <SimpleImageSlider
+                        width={500}
+                        height={350}
+                        images={this.props.Image}
+                        bac
+                        showBullets={true}
+                        showNavs={true}
+                    />
+                }
                 <div className="Product__Info">
                     <strong className="description">{this.props.description}</strong>
                     <p className="Price">
