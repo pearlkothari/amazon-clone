@@ -14,7 +14,6 @@ class Product extends Component{
                         width={500}
                         height={350}
                         images={this.props.Image}
-                        bac
                         showBullets={true}
                         showNavs={true}
                     />
