@@ -4,10 +4,6 @@ import Button from '@mui/material/Button'
 import './Product.css';
 
 class Product extends Component{
-    constructor(){
-        super();
-        this.update=this.update.bind(this);
-    }
     render(){
         return(
             <div className="Product__Basic">
