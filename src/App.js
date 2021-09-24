@@ -10,14 +10,18 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      count:0
+      count:0,
+      amount:0
     };
     this.update_cart_count=this.update_cart_count.bind(this);
   }
 
-  update_cart_count(){
+  update_cart_count(price){
     this.setState((prev) =>{
-        return{count:prev.count+1};
+        return{
+          count:prev.count+1,
+          amount:prev.amount+price
+        };
       });
   }
   render(){
@@ -31,7 +35,7 @@ class App extends Component {
             </Route>
             <Route path="/checkout">
               <Header cart={this.state.count}></Header>
-              <Checkout></Checkout>
+              <Checkout update={this.update_cart_count} cart={this.state.count} amount={this.state.amount}></Checkout>
             </Route>
             <Route component={ErrorComponent}></Route>
           </Switch>

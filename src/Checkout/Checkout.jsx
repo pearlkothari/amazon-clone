@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import './Checkout.css'
+import Subtotal from './Subtotal.jsx'
 import SimpleImageSlider from "react-simple-image-slider";
 
 class Checkout extends Component{
@@ -12,14 +13,19 @@ class Checkout extends Component{
             <div className="checkout">
                 <div className="checkout_left">
                     <SimpleImageSlider
-                        width={1510}
-                        height={190}
+                        width={1150}
+                        height={150}
                         images={this.Ad}
                         showNavs={true}
                     />
-                    <div className="checkout__title">
-                        <h2>Your Shopping Basket</h2>
+                    <div>
+                        <h2 className="checkout__title">
+                            Your Shopping Basket
+                        </h2>
                     </div>
+                </div>
+                <div className="checkout__right">
+                    <Subtotal total={this.props.cart} amount={this.props.amount}></Subtotal>
                 </div>
             </div>
         )

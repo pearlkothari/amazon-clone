@@ -23,7 +23,7 @@ class Home extends Component{
                         <Product 
                             Image="https://m.media-amazon.com/images/I/51+Uw6N7BnL._AC_SX466_.jpg"
                             description='Apple iPhone 11 Pro Max, 512GB' 
-                            Price='94900' 
+                            Price={94900}
                             Image_Slider={false}
                             Rating={4.5}
                             cart={this.props.cart}
@@ -32,7 +32,7 @@ class Home extends Component{
                             Image="https://m.media-amazon.com/images/I/51hIPZc5OjL._AC_SX522_.jpg"
                             description="Redmi Note 10 
                             ✓Qualcomm® Snapdragon™ 678 processor ✓5000mAh battery ✓Super AMOLED Display"
-                            Price='13999'
+                            Price={13999}
                             Image_Slider={false}
                             Rating={4.0}
                             cart={this.props.cart}
@@ -41,7 +41,7 @@ class Home extends Component{
                             Image="https://m.media-amazon.com/images/I/61hrWzvt9fL._SL1428_.jpg"
                             description="Gaming Headphone 
                                 HyperX Cloud Stinger S gaming headphones with noise-cancelling mic"
-                            Price="10000"
+                            Price={10000}
                             Image_Slider={false}
                             Rating={4.5}
                             cart={this.props.cart}
@@ -53,7 +53,7 @@ class Home extends Component{
                             Image="https://m.media-amazon.com/images/I/518gsOCe3wL._UY695_.jpg"
                             description="Nike Air Max 2021  Colour Shown: Black/Iron Grey/White  
                                 Style: DA1925-001"
-                            Price="14647"
+                            Price={14647}
                             Image_Slider={false}
                             Rating={4.5}
                             cart={this.props.cart}
@@ -61,7 +61,7 @@ class Home extends Component{
                         <Product
                             Image="https://images-eu.ssl-images-amazon.com/images/I/41wCa2TCJ2L._SX342_SY445_QL70_FMwebp_.jpg"
                             description="IFB 6kg 5 Star Fully Automatic Front Loading Washing Machine (Diva Aqua SX, Silver, Express wash, 2D Wash Technology)"
-                            Price="22499"
+                            Price={22499}
                             Image_Slider={false}
                             Rating={4}
                             cart={this.props.cart}
@@ -73,7 +73,7 @@ class Home extends Component{
                             description="1m 89cm Q800T 8K Smart QLED TV Real 8K Resolution & 8K AI Upscaling
                             Object Tracking Sound +
                             Voice Assistant with One Remote Control"
-                            Price="699990.00"
+                            Price={699990}
                             Image_Slider={true}
                             Rating={4.5}
                             cart={this.props.cart}
