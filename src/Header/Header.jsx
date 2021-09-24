@@ -1,27 +1,12 @@
-import React,{Component} from 'react';
+import React,{Component,useContext} from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
-import SearchIcon from "@mui/icons-material/Search"
+import SearchIcon from "@mui/icons-material/Search";
+import { useStateValue } from '../State/StateProvider';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-class Header extends Component{
-    constructor(){
-        super();
-
-        this.state={
-            count:0
-        };
-
-        this.update=this.update.bind(this);
-    }
-    update(){
-        this.setState(
-            (prev)=>{
-                return {count:prev.count+1};
-            }
-        );
-    }
-    render(){
+function Header(){
+        const [{basket},dispatch]= useStateValue();
         return(
             <div className="header clearfix">
                 <Link to="/">
@@ -72,13 +57,12 @@ class Header extends Component{
                     <Link to='/checkout'>
                         <div className="header__optionBasket">
                             <AddShoppingCartIcon/>
-                            <span className="header__second header__basketCount">{this.props.cart}</span>
+                            <span className="header__second header__basketCount">{basket?.length}</span>
                         </div>
                     </Link>
                 </div>
             </div>
         )
-    }
 }
 
 

@@ -2,17 +2,18 @@ import React,{Component} from "react";
 import './Subtotal.css';
 import Button from '@mui/material/Button'
 import CurrencyFormat from "react-currency-format";
+import {useStateValue} from '../State/StateProvider.jsx'
 
 
-class Subtotal extends Component{
-    render(){
+function Subtotal(){
+        const [{basket,Amount},dispatch]=useStateValue();
         return(
             <div className='Subtotal'>
                 <CurrencyFormat
                     renderText={(value)=>(
                         <>
                             <p>
-                                Subtotal ({this.props.total} items): 
+                                Subtotal ({basket.length} items): 
                                 <strong>{` ${ value}`}</strong>
                             </p>
                             <small className="subtotal__gift">
@@ -22,7 +23,7 @@ class Subtotal extends Component{
                         </>
                     )}
                     decimalScale={2}
-                    value={this.props.amount}
+                    value={Amount}
                     displayType={"text"}
                     thousandSeparator={true}
                     prefix={"₹"}
@@ -30,7 +31,6 @@ class Subtotal extends Component{
                 <Button variant="contained">Proceed to Checkout</Button>
             </div>
         )
-    }
 }
 
 export default Subtotal;

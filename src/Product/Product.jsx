@@ -3,35 +3,50 @@ import Rating from '@mui/material/Rating'
 import Button from '@mui/material/Button'
 import SimpleImageSlider from "react-simple-image-slider";
 import './Product.css';
+import {useStateValue} from '../State/StateProvider.jsx'
 
-class Product extends Component{
-    render(){
+function Product({ID,Image,description,Price,Image_Slider,rating}){
+    const [{basket},dispatch] = useStateValue();
+
+    const Add_To_Cart = () =>{
+        //dispatch the item into the data layer
+        console.log(rating);
+        dispatch({
+            type:'ADD_TO_BASKET',
+            item: {
+                ID:ID,
+                description:description,
+                Image:Image,
+                Price:Price,
+                rating:rating
+            }
+        })
+    }
         return(
             <div className="Product__Basic">
-                {!this.props.Image_Slider && <img src={this.props.Image} alt=""/>}
-                {this.props.Image_Slider && 
+                {!Image_Slider && <img src={Image} alt=""/>}
+                {Image_Slider && 
                     <SimpleImageSlider
                         width={500}
                         height={350}
-                        images={this.props.Image}
+                        images={Image}
                         showBullets={true}
                         showNavs={true}
                     />
                 }
-                <strong className="description">{this.props.description}</strong>
+                <strong className="description">{description}</strong>
                 <div className="Product__Info">
                     <p className="Price">
                         <small>₹ </small>
-                        <strong>{this.props.Price}</strong>
+                        <strong>{Price}</strong>
                     </p>
                     <div className="Product__Rating">
-                        <Rating className="half-rating" size="small" defaultValue={this.props.Rating} precision={0.5} />
+                        <Rating className="half-rating" size="small" defaultValue={rating} precision={0.5} />
                     </div>
-                    <Button variant="contained" onClick={()=> this.props.cart(this.props.Price)}>Add to cart</Button>
+                    <Button variant="contained" onClick={Add_To_Cart}>Add to cart</Button>
                 </div>
             </div>
         )
-    }
 }
 
 export default Product;

@@ -25,7 +25,7 @@ class Checkout extends Component{
                     </div>
                 </div>
                 <div className="checkout__right">
-                    <Subtotal total={this.props.cart} amount={this.props.amount}></Subtotal>
+                    <Subtotal></Subtotal>
                 </div>
             </div>
         )
