@@ -20,18 +20,20 @@
   object-fit: contain;
   margin-bottom: 10px;
 }
-
+.Product__Info {
+  align-content: center;
+}
 .Price {
-  margin-left: 40%;
   margin-top: 10px;
+  margin-left: 20%;
 }
 .half-rating {
-  margin-left: 40%;
+  margin-left: 20%;
+  position: relative;
   margin-top: 10px;
 }
 .Product__Info > button {
   background-color: yellowgreen;
-  align-items: center;
+  position: relative;
   margin-top: 10px;
-  margin-left: 35%;
 }

@@ -18,8 +18,8 @@ class Product extends Component{
                         showNavs={true}
                     />
                 }
+                <strong className="description">{this.props.description}</strong>
                 <div className="Product__Info">
-                    <strong className="description">{this.props.description}</strong>
                     <p className="Price">
                         <small>₹ </small>
                         <strong>{this.props.Price}</strong>
@@ -27,7 +27,7 @@ class Product extends Component{
                     <div className="Product__Rating">
                         <Rating className="half-rating" size="small" defaultValue={this.props.Rating} precision={0.5} />
                     </div>
-                    <Button variant="contained">Add to cart</Button>
+                    <Button variant="contained" onClick={this.props.cart}>Add to cart</Button>
                 </div>
             </div>
         )

@@ -8,6 +8,9 @@ class Home extends Component{
         { url: "https://images.samsung.com/is/image/samsung/p6pim/in/qa85qn900akxxl/gallery/in-neo-qled-8k-qn900a-qa85qn900akxxl-430985143?$684_547_PNG$" },
         { url: "https://images.samsung.com/is/image/samsung/p6pim/in/qa85qn900akxxl/gallery/in-neo-qled-8k-qn900a-qa85qn900akxxl-430956070?$684_547_PNG$" },
     ];
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
             <div className="Home__page">
@@ -23,6 +26,7 @@ class Home extends Component{
                             Price='94900' 
                             Image_Slider={false}
                             Rating={4.5}
+                            cart={this.props.cart}
                         />
                         <Product
                             Image="https://m.media-amazon.com/images/I/51hIPZc5OjL._AC_SX522_.jpg"
@@ -31,6 +35,7 @@ class Home extends Component{
                             Price='13999'
                             Image_Slider={false}
                             Rating={4.0}
+                            cart={this.props.cart}
                         />
                         <Product
                             Image="https://m.media-amazon.com/images/I/61hrWzvt9fL._SL1428_.jpg"
@@ -39,6 +44,7 @@ class Home extends Component{
                             Price="10000"
                             Image_Slider={false}
                             Rating={4.5}
+                            cart={this.props.cart}
                         />
                         
                     </div>
@@ -50,6 +56,7 @@ class Home extends Component{
                             Price="14647"
                             Image_Slider={false}
                             Rating={4.5}
+                            cart={this.props.cart}
                         />
                         <Product
                             Image="https://images-eu.ssl-images-amazon.com/images/I/41wCa2TCJ2L._SX342_SY445_QL70_FMwebp_.jpg"
@@ -57,6 +64,7 @@ class Home extends Component{
                             Price="22499"
                             Image_Slider={false}
                             Rating={4}
+                            cart={this.props.cart}
                         />
                     </div>
                     <div className="home__row">
@@ -68,6 +76,7 @@ class Home extends Component{
                             Price="699990.00"
                             Image_Slider={true}
                             Rating={4.5}
+                            cart={this.props.cart}
                         />
                     </div>
                 </div>

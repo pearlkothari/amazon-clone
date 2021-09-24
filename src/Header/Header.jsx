@@ -23,9 +23,12 @@ class Header extends Component{
     render(){
         return(
             <div className="header clearfix">
-                <img className="header__logo" 
-                    src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"
-                    alt=""/>
+                <a href="/">
+                    <img className="header__logo" 
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"
+                        alt=""
+                    />
+                </a>
 
                 <div className="header__search">
                     <input 
@@ -67,7 +70,7 @@ class Header extends Component{
 
                     <div className="header__optionBasket">
                         <AddShoppingCartIcon/>
-                        <span className="header__second header__basketCount">{this.state.count}</span>
+                        <span className="header__second header__basketCount">{this.props.cart}</span>
                     </div>
                 </div>
             </div>
