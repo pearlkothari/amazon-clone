@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import Rating from '@mui/material/Rating'
 import Button from '@mui/material/Button'
 import SimpleImageSlider from "react-simple-image-slider";
@@ -10,7 +10,7 @@ function Product({ID,Image,description,Price,Image_Slider,rating}){
 
     const Add_To_Cart = () =>{
         //dispatch the item into the data layer
-        console.log(rating);
+        // console.log(rating);
         dispatch({
             type:'ADD_TO_BASKET',
             item: {
