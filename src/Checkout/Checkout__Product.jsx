@@ -1,31 +1,39 @@
 import Rating from '@mui/material/Rating';
 import './Checkout__Product.css';
-import React,{Component} from "react";
+import React from "react";
 import Button from '@mui/material/Button';
+import {useStateValue } from "../State/StateProvider";
 
-class Checkout__Product extends Component{
-    render(){
+
+function Checkout__Product({id,title,image,price,rating}){
+    const [{basket},dispatch] = useStateValue();
+
+    const removeFromBasket =() =>{
+        dispatch({
+            type: 'REMOVE_FROM_BASKET',
+            ID:id,
+        })
+    }
         return(
             <div className="checkout_product">
-                <img className="checkout_product_img" src={this.props.image}
+                <img className="checkout_product_img" src={image}
                     alt=""
                 />
                 <div className="checkoutProduct__info">
                     <p className='checkoutProduct__title'>
-                        <strong>{this.props.title}</strong>
+                        <strong>{title}</strong>
                     </p>
                     <p className="checkoutProduct__price">
                         <small>₹</small>
-                        <strong>{this.props.price}</strong>
+                        <strong>{price}</strong>
                     </p>
                     <div className="mui">
-                        <Rating variant="half-rating" size="small" defaultValue={this.props.rating} precision={0.5} />
-                        <Button variant="contained">Remove From Cart</Button>   
+                        <Rating variant="half-rating" size="small" defaultValue={rating} precision={0.5} />
+                        <Button variant="contained" onClick={removeFromBasket}>Remove From Cart</Button>   
                     </div>                 
                 </div>
             </div>
         )
-    }
 }
 
 export default Checkout__Product;
