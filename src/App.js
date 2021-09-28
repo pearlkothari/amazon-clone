@@ -5,6 +5,7 @@ import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import { Component } from 'react';
 import ErrorComponent from './ErrorComponent';
 import Checkout from './Checkout/Checkout';
+import Login from './Login/Login';
 
 class App extends Component {
   constructor(props){
@@ -32,6 +33,9 @@ class App extends Component {
             <Route path='/' exact>
               <Header cart={this.state.count}></Header>
               <Home cart={this.update_cart_count}></Home>
+            </Route>
+            <Route path='/login'>
+                <Login></Login>
             </Route>
             <Route path="/checkout">
               <Header cart={this.state.count}></Header>

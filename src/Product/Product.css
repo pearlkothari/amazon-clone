@@ -33,7 +33,8 @@
   margin-top: 10px;
 }
 .Product__Info > button {
-  background-color: yellowgreen;
+  background-color: #f0c14b;
   position: relative;
   margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
 }

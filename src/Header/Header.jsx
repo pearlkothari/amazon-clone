@@ -27,15 +27,16 @@ function Header(){
                 </div>
 
                 <div className="header__navbar">
-                    <div className="header__option">
-                        <span className="header__first">
-                            Hello Guest
-                        </span>
-                        <span className="header__second">
-                            Sign in
-                        </span>
-                    </div>
-
+                    <Link to='/login'>
+                        <div className="header__option">
+                                <span className="header__first">
+                                    Hello Guest
+                                </span>
+                                <span className="header__second">
+                                    Sign in
+                                </span>
+                        </div>
+                    </Link>
                     <div className="header__option">
                         <span className="header__first">
                             Returns
