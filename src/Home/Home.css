@@ -16,7 +16,7 @@
 .Prime__Image {
   width: 100%;
   z-index: -1;
-  margin-bottom: -170px;
-  max-height: 550px;
-  mask-image: linear-gradient(rgb(0, 0, 0), transparent);
+  margin-bottom: -110px;
+  max-height: 450px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }

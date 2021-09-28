@@ -38,20 +38,21 @@
   font-size: 12px;
 }
 
-.Sign__Login {
+.Login_Container > form > button {
   border-radius: 2px;
   width: 100%;
   height: 30px;
   border: 1px solid;
   margin-top: 10px;
-  background-color: #f0c14b;
+  background-color: #ebaf17;
   border-color: #a88734 #9c7e31 #846a29;
 }
-.Create__Account {
+.Login_Container > button {
   border-radius: 2px;
   width: 100%;
   height: 30px;
   border: 1px solid;
   margin-top: 10px;
-  border-color: darkgray;
+  background-color: #ebaf17;
+  border-color: #a88734 #9c7e31 #846a29;
 }

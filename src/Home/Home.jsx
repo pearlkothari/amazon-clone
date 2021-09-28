@@ -15,8 +15,9 @@ class Home extends Component{
         return(
             <div className="Home__page">
                 <div clasName="Home__Prime__Container">
-                    <img className="Prime__Image" src="https://m.media-amazon.com/images/G/01/AdProductsWebsite/long-term-assets/ad-specs/ss_expanse_do._TTW_.jpg"
-                        width="100%" height="80%"
+                    <img className="Prime__Image" 
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/PYA/2020/January/GW/PYA_GW_Herotator._CB425760095_.jpg"
+                        width="100%" height="90%"
                         alt=""
                     />
                     <div className="home__row">
