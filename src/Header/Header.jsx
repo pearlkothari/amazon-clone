@@ -1,12 +1,20 @@
-import React,{Component,useContext} from 'react';
+import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import SearchIcon from "@mui/icons-material/Search";
 import { useStateValue } from '../State/StateProvider';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { auth } from '../firebase.js';
+
 
 function Header(){
-        const [{basket},dispatch]= useStateValue();
+        const [{basket,user},dispatch]= useStateValue();
+        function handleAuthentication (){
+            console.log(user);
+            if(user){
+                auth.signOut();
+            }
+        }
         return(
             <div className="header clearfix">
                 <Link to="/">
@@ -27,17 +35,15 @@ function Header(){
                 </div>
 
                 <div className="header__navbar">
-                    <Link to='/login'>
-                        <div className="header__option">
+                    <Link to={!user && '/login'}>
+                        <div onCLick={handleAuthentication} className="header__option">
                                 <span className="header__first">
-                                    Hello Guest
+                                    Hello {user? user.email:'Guest'}
                                 </span>
-                                <span className="header__second">
-                                    Sign in
-                                </span>
+                                <span className="header__second">{user?'Sign Out':'Sign In'}</span>
                         </div>
                     </Link>
-                    <div className="header__option">
+                    <div className="header__option" >
                         <span className="header__first">
                             Returns
                         </span>

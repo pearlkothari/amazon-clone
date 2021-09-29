@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import './Login.css'
 import { Link ,useHistory} from "react-router-dom";
 import { auth } from "../firebase";
@@ -12,10 +12,16 @@ function Login(){
     const signIn=event=>{
         event.preventDefault();
         // This prevent Page from refreshing we dont want refresh in react!!
-        /*
+        /* 
             Some Fancy Firebase Login
         */
-
+        auth.signInWithEmailAndPassword(email,password)
+        .then(auth=>{
+            if(auth){
+                history.push('/');
+            }
+        })
+        .catch(error=> alert(error.message));
     }
 
     const register= event=>{

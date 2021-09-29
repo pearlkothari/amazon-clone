@@ -1,6 +1,7 @@
 export const initialState = {
     basket:[],
-    Amount:0
+    Amount:0,
+    user:null
 };
 
 const reducer = (state,action) => {
@@ -24,6 +25,11 @@ const reducer = (state,action) => {
                 ...state,
                 Amount:state.Amount-state.basket[index].Price,
                 basket: newBasket
+            }
+        case "SET_USER":
+            return{
+                ...state,
+                user:action.user
             }
         default:
             return state;
