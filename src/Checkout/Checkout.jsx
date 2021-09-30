@@ -7,7 +7,7 @@ import Checkout__Product from "./Checkout__Product";
 
 function Checkout(){
 
-    const [{basket},dispatch]=useStateValue();
+    const [{user,basket},dispatch]=useStateValue();
     const Ad=[
         {url:"https://images-eu.ssl-images-amazon.com/images/G/31/img16/GiftCards/LPAIndia/Header/170_AP_1500x300.jpg"},
         {url:"https://images-eu.ssl-images-amazon.com/images/G/31/img16/GiftCards/LPAIndia/Offers/Yatra/LPA_201_1500x250.jpg"}
@@ -22,6 +22,7 @@ function Checkout(){
                         showNavs={true}
                     />
                     <>
+                        <h3>Hello,{user?.email}</h3>
                         <h2 className="checkout__title">
                             Your Shopping Basket
                         </h2>
