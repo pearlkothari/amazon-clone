@@ -1,16 +1,25 @@
 .checkout_product {
-  width: 300px;
-  display: block;
+  width: auto;
+  display: flex;
+  flex-direction: row;
   margin-left: 10px;
   padding: 10px;
   border: 1px gray;
 }
+.checkoutProduct__info {
+  margin-top: 20px;
+
+  width: fit-content;
+  margin-left: 20px;
+  align-items: center;
+}
 .checkoutProduct__price {
-  margin-top: 10px;
+  margin-top: 15px;
+  max-width: max-content;
 }
 .checkout_product_img {
   margin-top: 20px;
-  width: 70px;
+  width: 200px;
   height: max-content;
 }
 .mui {
@@ -19,6 +28,7 @@
   flex-direction: column;
 }
 .mui > button {
+  max-width: 300px;
   margin-top: 5px;
   background-color: #f7b40b;
   border-color: #a88734 #9c7e31 #846a29;
