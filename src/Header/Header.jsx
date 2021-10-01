@@ -9,8 +9,7 @@ import { auth } from '../firebase.js';
 
 function Header(){
         const [{basket,user},dispatch]= useStateValue();
-        function handleAuthentication (){
-            console.log(user);
+        const handleAuthentication =()=>{
             if(user){
                 auth.signOut();
             }
@@ -36,11 +35,11 @@ function Header(){
 
                 <div className="header__navbar">
                     <Link to={!user && '/login'}>
-                        <div onCLick={handleAuthentication} className="header__option">
+                        <div  className="header__option">
                                 <span className="header__first">
-                                    Hello {user? user.email:'Guest'}
+                                    Hello {user? '':'Guest'}
                                 </span>
-                                <span className="header__second">{user?'Sign Out':'Sign In'}</span>
+                                <span className="header__second">{user?user.email:'Sign In'}</span>
                         </div>
                     </Link>
                     <div className="header__option" >
@@ -68,6 +67,7 @@ function Header(){
                         </div>
                     </Link>
                 </div>
+                {user && <button className="btn" onClick={handleAuthentication}>Sign Out</button>}
             </div>
         )
 }

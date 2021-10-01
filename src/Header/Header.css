@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+.btn {
+  background-color: #fa8f02;
+  color: black;
+}
+
 .header__logo {
   width: 100px;
   object-fit: contain;

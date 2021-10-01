@@ -43,7 +43,7 @@ function Product({ID,Image,description,Price,Image_Slider,rating}){
                     <div className="Product__Rating">
                         <Rating className="half-rating" size="small" defaultValue={rating} precision={0.5} />
                     </div>
-                    <Button variant="contained" onClick={Add_To_Cart}>Add to cart</Button>
+                    <Button variant="contained" onClick={Add_To_Cart}>{'Add to cart'}</Button>
                 </div>
             </div>
         )
