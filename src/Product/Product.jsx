@@ -18,7 +18,8 @@ function Product({ID,Image,description,Price,Image_Slider,rating}){
                 description:description,
                 Image:Image,
                 Price:Price,
-                rating:rating
+                rating:rating,
+                Image_Slider:Image_Slider
             }
         })
     }

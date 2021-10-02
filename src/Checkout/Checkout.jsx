@@ -3,6 +3,7 @@ import './Checkout.css'
 import Subtotal from './Subtotal.jsx'
 import {useStateValue } from "../State/StateProvider";
 import SimpleImageSlider from "react-simple-image-slider";
+import FlipMove from 'react-flip-move';
 import Checkout__Product from "./Checkout__Product";
 
 function Checkout(){
@@ -28,13 +29,14 @@ function Checkout(){
                         </h2>
                     </>
                     {basket.map(element => (
-                                <Checkout__Product 
-                                    id={element.ID}
-                                    title={element.description}
-                                    image={element.Image}
-                                    price={element.Price}
-                                    rating={element.rating}
-                                ></Checkout__Product>
+                            <Checkout__Product 
+                                image_slider={element.Image_Slider}
+                                id={element.ID}
+                                title={element.description}
+                                image={element.Image}
+                                price={element.Price}
+                                rating={element.rating}
+                            ></Checkout__Product>
                     ))}
                 </div>
                 <div className="checkout__right">
