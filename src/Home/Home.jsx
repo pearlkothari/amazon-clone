@@ -51,6 +51,18 @@ class Home extends Component{
                     </div>
                     <div className="home__row">
                         <Product
+                            ID={6}
+                            Image={this.tv_images}
+                            description="1m 89cm Q800T 8K Smart QLED TV Real 8K Resolution & 8K AI Upscaling
+                            Object Tracking Sound +
+                            Voice Assistant with One Remote Control"
+                            Price={699990}
+                            Image_Slider={true}
+                            rating={4.5}
+                        />
+                    </div>
+                    <div className="home__row">
+                        <Product
                             ID={4}
                             Image="https://m.media-amazon.com/images/I/518gsOCe3wL._UY695_.jpg"
                             description="Nike Air Max 2021  Colour Shown: Black/Iron Grey/White  
@@ -66,18 +78,6 @@ class Home extends Component{
                             Price={22499}
                             Image_Slider={false}
                             rating={4}
-                        />
-                    </div>
-                    <div className="home__row">
-                        <Product
-                            ID={6}
-                            Image={this.tv_images}
-                            description="1m 89cm Q800T 8K Smart QLED TV Real 8K Resolution & 8K AI Upscaling
-                            Object Tracking Sound +
-                            Voice Assistant with One Remote Control"
-                            Price={699990}
-                            Image_Slider={true}
-                            rating={4.5}
                         />
                     </div>
                 </div>
