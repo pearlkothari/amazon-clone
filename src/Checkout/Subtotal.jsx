@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React from "react";
 import './Subtotal.css';
 import Button from '@mui/material/Button'
 import CurrencyFormat from "react-currency-format";
