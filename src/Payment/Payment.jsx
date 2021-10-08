@@ -1,11 +1,25 @@
 import React from "react";
+import { CardElement,useStripe,useElements } from "@stripe/react-stripe-js";
 import { useStateValue } from "../State/StateProvider";
 import Checkout__Product from '../Checkout/Checkout__Product'
 import './Payment.css'
 import { Link } from "react-router-dom";
 
 function Payment(){
+    const stripe =useStripe();
+    const elements =useElements();
     const [{basket,user},dispatch]=useStateValue();
+
+    const [error,setError]=useState(null);
+    const [disabled,setDisabled] =useState(true);
+    const handleSubmit = event =>{
+        
+    }
+
+    const handleChange = event =>{
+        setDisabled(event.empty);
+        setError(event.error?event.error.message:"");
+    }
     return(
         <div className='payment'>
             <div className='payment__container'>
@@ -46,7 +60,25 @@ function Payment(){
                         <h3>Payment Method</h3>
                     </div>
                     <div className='payment__details'>
-
+                            <form onSubmit={handlePayment}>
+                                <CardElement
+                                    onChange={handleChange}
+                                    options={{
+                                        style: {
+                                          base: {
+                                            fontSize: '16px',
+                                            color: '#424770',
+                                            '::placeholder': {
+                                              color: '#aab7c4',
+                                            },
+                                          },
+                                          invalid: {
+                                            color: '#9e2146',
+                                          },
+                                        },
+                                      }}
+                                ></CardElement>
+                            </form>
                     </div>
                 </div>
             </div>

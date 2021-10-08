@@ -2,6 +2,10 @@
   background-color: white;
 }
 
+.payment__details{
+  flex: 0.8;
+}
+
 .payment__container > h1 {
   text-align: center;
   padding: 10px;
