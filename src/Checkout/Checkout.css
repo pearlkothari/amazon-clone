@@ -4,9 +4,12 @@
   padding: 10px;
   margin-right: 5px;
   background-color: white;
-  height: max-content;
+  max-width: 100%;
 }
 
+.checkout__right {
+  margin-right: auto;
+}
 .name {
   margin-right: 10px;
   padding: 10px;
