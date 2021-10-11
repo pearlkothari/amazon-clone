@@ -10,7 +10,7 @@ import { auth } from './firebase.js';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import { useStateValue } from './State/StateProvider';
-import Payment from './Payment/Payment';
+import Payment from './Payment/Payment.jsx';
 
 const promise =loadStripe(
   "pk_test_51JSQQbSJspC6yXhCZcmzx59N63xKyJTO5BNYp8HR7mC2AoDM6ncTxsV3hWkNCCV6KnK1NgeAsp6u25v76yQf2wKB004tfROwPQ"

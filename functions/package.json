@@ -14,9 +14,14 @@
   },
   "main": "index.js",
   "dependencies": {
+    "@stripe/react-stripe-js": "https://registry.npmjs.org/@stripe/react-stripe-js/-/react-stripe-js-1.4.1.tgz",
+    "cors": "^2.8.5",
+    "cross-origin": "^1.0.6",
+    "eslintrc": "^1.0.6",
     "express": "^4.17.1",
     "firebase-admin": "^9.8.0",
     "firebase-functions": "^3.14.1",
+    "react-stripe": "^0.1.0",
     "stripe": "^8.179.0"
   },
   "devDependencies": {
