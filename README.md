@@ -10,3 +10,4 @@ CHECKOUT
 
 PAYMENT
 ![alt text](https://github.com/pearlkothari/amazon-clone/blob/main/src/Images/Payment.png?raw=true)
+![alt text](https://github.com/pearlkothari/amazon-clone/blob/main/src/Images/Final_Payment.png?raw=true)
