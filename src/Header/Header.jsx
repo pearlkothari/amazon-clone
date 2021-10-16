@@ -42,14 +42,16 @@ function Header(){
                                 <span className="header__second">{user?user.email:'Sign In'}</span>
                         </div>
                     </Link>
-                    <div className="header__option" >
-                        <span className="header__first">
-                            Returns
-                        </span>
-                        <span className="header__second">
-                             & Orders
-                        </span>
-                    </div>
+                    <Link to={user && '/Orders'}>
+                        <div className="header__option" >
+                            <span className="header__first">
+                                Returns
+                            </span>
+                            <span className="header__second">
+                                & Orders
+                            </span>
+                        </div>
+                    </Link>
 
                     <div className="header__option">
                         <span className="header__first">

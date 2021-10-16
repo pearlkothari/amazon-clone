@@ -6,7 +6,7 @@ import FlipMove from 'react-flip-move';
 import {useStateValue } from "../State/StateProvider";
 
 
-function Checkout__Product({image_slider,id,title,image,price,rating}){
+function Checkout__Product({image_slider,id,title,image,price,rating,button_disable}){
     const [{basket},dispatch] = useStateValue();
 
     const removeFromBasket =() =>{
@@ -32,7 +32,7 @@ function Checkout__Product({image_slider,id,title,image,price,rating}){
                         </p>
                         <div className="mui">
                             <Rating variant="half-rating" size="small" defaultValue={rating} precision={0.5} />
-                            <Button variant="contained" onClick={removeFromBasket}>Remove From Cart</Button>   
+                            {!button_disable && <Button variant="contained" onClick={removeFromBasket}>Remove From Cart</Button>} 
                         </div>                 
                     </div>
                 </div>

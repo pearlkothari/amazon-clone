@@ -34,6 +34,7 @@ function Checkout(){
                                     image={element.Image}
                                     price={element.Price}
                                     rating={element.rating}
+                                    button_disable={false}
                                 ></Checkout__Product>
                         ))}
                     </>
